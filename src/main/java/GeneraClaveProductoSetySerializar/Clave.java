@@ -22,4 +22,15 @@ public class Clave {
     public int hashCode() {
         return (this.clave).hashCode();
     }
+
+    public boolean equals(Object clv) {
+        boolean igual = false;
+        if (clv != null && getClass() == clv.getClass()) {
+            Clave clave = (Clave) clv;
+            if (this.clave.equals(clave.clave)) {
+            igual = true;
+            }
+        }
+        return igual;
+    }
 }
